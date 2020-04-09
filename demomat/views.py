@@ -73,9 +73,9 @@ def index2(reqeust):
     # 显示横轴标签
     plt.xlabel("2020年月度业绩")
     # 显示纵轴标签
-    plt.ylabel("频数/频率")
+    plt.ylabel("业绩/月份")
     # 显示图标题
-    plt.title("频数/频率分布直方图")
+    plt.title("2020年月度业绩直方图")
     plt.savefig('static/pic/test4.png')
     plt.clf()
     plt.close()
