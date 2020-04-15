@@ -7,7 +7,7 @@ from .models import PartInfo,ManInfo
 class PartInfoAdmin(admin.ModelAdmin):
     list_display = ['id', 'btitle', 'bpub_date','bread','bcomment']
 class ManInfoAdmin(admin.ModelAdmin):
-    list_display = ['id', 'name','month','yeji','huikuan','hetong']
+    list_display = ['id', 'mpart','name','month','yeji','huikuan','hetong']
 
 admin.site.register(PartInfo,PartInfoAdmin)
 admin.site.register(ManInfo,ManInfoAdmin)

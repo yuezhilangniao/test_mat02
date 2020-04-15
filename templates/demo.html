@@ -5,6 +5,27 @@
     <title>Title</title>
 </head>
 <body>
-<h1>index</h1>
+
+{% for m in mans %}
+    <h1>demo yemian <a href="/demo1/{{ m.id }}">点击放电30minute</a></h1>
+    {{ m.id }}<br>
+        {% if m.isDelete == True %}
+            <h2 style="color: red">红色状态</h2><br>
+        {% else %}
+            <h2 style="color: #0FB25F">绿色状态</h2>
+        {% endif %}
+
+    {{ m.mpart }}<br>
+{% endfor %}
+<h1>---------------------------------------</h1>
+{% if a == 'white' %}
+    <h2 style="color: black">白色状态</h2><br>
+        {% elif a == 'red' %}
+            <h2 style="color: red">红色状态</h2><br>
+        {% elif a == 'green' %}
+            <h2 style="color: #0FB25F">绿色状态</h2>
+        {% endif %}
+
+{#<h1>变量{{ var }}</h1>#}
 </body>
 </html>

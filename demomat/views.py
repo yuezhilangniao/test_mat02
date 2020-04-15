@@ -12,9 +12,61 @@ import random
 import datetime
 import numpy as np
 import pandas as pd
-from .models import ManInfo
+from .models import ManInfo,PartInfo
 # Create your views here.
+import time
+import asyncio
+from threading import Timer
 
+
+
+def green(id):
+
+    mans = ManInfo.objects.filter(id=id)
+    for m1 in mans:
+        m1.isDelete = False
+        print(m1.isDelete)
+        m1.save()
+
+
+def demo1(request,id):
+
+    mans = ManInfo.objects.filter(id=id)
+    for m1 in mans:
+        m1.isDelete = True
+        print(m1.isDelete)
+        m1.save()
+
+    print('------------------')
+    print(id)
+    t = Timer(1800, green,(id))
+    t.daemon = True
+    t.start()
+    print('-----end-----')
+
+    return render(request,'index1.html')
+
+
+def demo(request):
+    mans = ManInfo.objects.filter(id=1)
+    var = 10
+
+
+    context = {
+        'mans':mans,
+        'var':var,
+        'a':'white'
+    }
+    return render(request,'demo.html',context)
+
+
+def func():
+    mans = ManInfo.objects.filter(id=1)
+    for m1 in mans:
+        m1.isDelete = False
+        m2 = m1.isDelete
+        m1.save()
+    #return m2
 
 
 

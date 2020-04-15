@@ -6,6 +6,8 @@ urlpatterns = [
     url(r'^$', views.index),
     url(r'^index2/$', views.index2),
     url(r'^index3/$', views.index3),
-    url(r"^doc/",views.doc)
+    url(r"^doc/",views.doc),
+    url(r"^demo/", views.demo),
+    url(r"^demo1/(?P<id>\d+)$", views.demo1),
 
 ]
