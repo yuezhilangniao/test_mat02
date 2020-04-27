@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>celery</title>
+</head>
+<body>
+
+<h1>celery页面</h1>
+<ul style="font-size: x-large">
+
+{% for user in users %}
+
+    <li>
+        {{ user.id }}
+        ---
+        {{ user.username }}
+        -----
+        {% if user.status == 1 %}
+            <span style="color: #0FB25F">绿色状态</span>
+        {% elif user.status == 2 %}
+            <span style="color: red">红色状态</span>
+       {% elif user.status == 3 %}
+            <span style="color: orange">黄色状态</span>
+        {% elif user.status == 4 %}
+            <span style="color: black">免打扰状态</span>
+        {% endif %}
+
+        <a href="/red/{{ user.id }}">点击变红色</a>
+
+    </li>
+
+{% endfor %}
+<h2>-------------celery测试-----------------</h2>
+
+
+</ul>
+
+
+
+
+{#    <li>id --- name ----- zhuangtai </li>#}
+{##}
+{#    <li>id --- name ----- zhuangtai </li>#}
+{##}
+{#    <li>id --- name ----- zhuangtai </li>#}
+
+
+
+
+</body>
+</html>

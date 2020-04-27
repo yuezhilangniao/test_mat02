@@ -23,7 +23,10 @@
       
       <!-- logo -->
       <div id="logo" class="sidebar-header">
-        <a href="booktest/index.html"><img src="../static/images/logo-sidebar.png" title="LightYear" alt="LightYear" /></a>
+        <a href="/index1/">
+            <img src="/static/images/logo-sidebar.png" title="byzoro"  />
+
+        </a>
       </div>
       <div class="lyear-layout-sidebar-scroll"> 
         
@@ -33,8 +36,9 @@
             <li class="nav-item active"> <a href="/index2/"><i class="mdi mdi-home"></i> 数据探索</a> </li>
             <li class="nav-item active"> <a href="/index3/"><i class="mdi mdi-home"></i> 数据分布</a> </li>
             <li class="nav-item active"> <a href="/doc/"><i class="mdi mdi-home"></i> 数据列表</a> </li>
-            <li class="nav-item active"> <a href="../static/login.html"><i class="mdi mdi-home"></i> 登录页面</a> </li>
+            <li class="nav-item active"> <a href="/login/"><i class="mdi mdi-home"></i> 登录页面</a> </li>
                <li class="nav-item active"> <a href="/demo/"><i class="mdi mdi-home"></i> demo页面</a> </li>
+               <li class="nav-item active"> <a href="/celery/"><i class="mdi mdi-home"></i> celery测试</a> </li>
        		</ul>
         </nav>   
         
@@ -62,15 +66,21 @@
           <ul class="topbar-right">
             <li class="dropdown dropdown-profile">
               <a href="javascript:void(0)" data-toggle="dropdown">
-                <!--<img class="img-avatar img-avatar-48 m-r-10" src="../static//images/users/avatar.jpg" alt="百卓网络" />-->
-                <span>百卓网络 <span class="caret"></span></span>
+                <!--<img
+                 class="img-avatar img-avatar-48 m-r-10" src="../static//images/users/avatar.jpg" alt="百卓网络" />-->
+
+               {% if request.user != 'AnonymousUser' %}
+                <span>百卓网络{{ request.user }}<span class="caret"></span></span>
+                  {% elif 1 == 1 %}
+                  <span>百卓网络<span class="caret"></span></span>
+                  {% endif %}
               </a>
               <ul class="dropdown-menu dropdown-menu-right">
                 <li> <a href="lyear_pages_profile.html"><i class="mdi mdi-account"></i> 个人信息</a> </li>
                 <li> <a href="lyear_pages_edit_pwd.html"><i class="mdi mdi-lock-outline"></i> 修改密码</a> </li>
                 <li> <a href="javascript:void(0)"><i class="mdi mdi-delete"></i> 清空缓存</a></li>
                 <li class="divider"></li>
-                <li> <a href="lyear_pages_login.html"><i class="mdi mdi-logout-variant"></i> 退出登录</a> </li>
+                <li> <a href="/logout/"><i class="mdi mdi-logout-variant"></i> 退出登录</a> </li>
               </ul>
             </li>
             <!--切换主题配色-->
@@ -298,7 +308,7 @@
 {#                  <div class="iframe-body-sty">#}
 {#	                <iframe id="iframe-shrink" src="../static/render.html" width="481px" height="364px"></iframe>#}
 {#                    </div>#}
-                    <img src="../static/pic/pie.png">
+                    <img src="../static/pic/pie.png" width="443px" height="332px">
 {#                <canvas class="js-chartjs-lines"></canvas>#}
               </div>
             </div>
@@ -329,7 +339,7 @@
                     <tbody>
                       <tr>
                         <td>1</td>
-                        <td>设计新主题</td>
+                        <td>数据新主题</td>
                         <td>10/02/2019</td>
                         <td>12/05/2019</td>
                         <td><span class="label label-warning">待定</span></td>
@@ -341,7 +351,7 @@
                       </tr>
                       <tr>
                         <td>2</td>
-                        <td>网站重新设计</td>
+                        <td>网站重新数据</td>
                         <td>01/03/2019</td>
                        <td>12/04/2019</td>
                         <td><span class="label label-success">进行中</span></td>
@@ -353,7 +363,7 @@
                       </tr>
                       <tr>
                         <td>3</td>
-                        <td>模型设计</td>
+                        <td>模型数据</td>
                          <td>10/10/2019</td>
                          <td>12/11/2019</td>
                         <td><span class="label label-warning">待定</span></td>
@@ -365,7 +375,7 @@
                       </tr>
                       <tr>
                         <td>4</td>
-                        <td>数据管理系统模板设计</td>
+                        <td>数据管理系统模板数据</td>
                         <td>25/01/2019</td>
                         <td>09/05/2019</td>
                         <td><span class="label label-success">进行中</span></td>
@@ -377,7 +387,7 @@
                       </tr>
                       <tr>
                         <td>5</td>
-                        <td>前端设计</td>
+                        <td>前端数据</td>
                         <td>10/10/2019</td>
                         <td>12/12/2019</td>
                         <td><span class="label label-danger">未开始</span></td>
@@ -389,7 +399,7 @@
                       </tr>
                       <tr>
                         <td>6</td>
-                        <td>桌面软件测试</td>
+                        <td>软件测试</td>
                         <td>10/01/2019</td>
                         <td>29/03/2019</td>
                         <td><span class="label label-success">进行中</span></td>
@@ -413,7 +423,7 @@
                       </tr>
                       <tr>
                         <td>8</td>
-                        <td>Logo设计</td>
+                        <td>运营商数据</td>
                         <td>10/02/2019</td>
                         <td>01/03/2019</td>
                         <td><span class="label label-warning">完成</span></td>

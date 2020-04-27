@@ -37,3 +37,9 @@ class ManInfo(models.Model):
         verbose_name = '员工表'
         verbose_name_plural = verbose_name
 
+
+
+class Book(models.Model):
+    name = models.CharField(max_length=20, verbose_name='书名')
+    body = models.CharField(max_length=20, verbose_name='书体')
+    b_man = models.ManyToManyField(ManInfo,blank=True,verbose_name='liaoke')

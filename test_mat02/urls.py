@@ -18,5 +18,6 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^', include('demomat.urls')),
+    url(r'^', include('celerytapp.urls')),
     url(r'^admin/', admin.site.urls),
 ]

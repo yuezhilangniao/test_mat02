@@ -38,6 +38,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'demomat',
+    'celerytapp',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -103,3 +104,5 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+# 指定静态文件的存放目录
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
